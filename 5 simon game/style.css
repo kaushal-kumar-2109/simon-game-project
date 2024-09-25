@@ -1,0 +1,293 @@
+*{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.body{
+    height:100vh;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.home{
+    background-image: url(./assets/background.jpeg);
+    background-size: cover;
+    height:100vh;
+    width: 400px;
+    display:flex;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hide{
+    animation: hideScreen;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    overflow: hidden;
+}
+@keyframes hideScreen {
+    0%{
+        transform: rotate(0deg);
+        display: flex;
+    }
+    100%{
+        transform: rotate(360deg);
+        height: 0;
+        border-radius: 50%;
+        width: 0;
+        display: none;
+    }
+}
+.name{
+    background:transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.name h1{
+    background: transparent;
+    font-family: fantasy;
+    color: rgba(255, 255, 255, 0.733);
+    word-spacing: 2%;
+    font-size: 80px;
+}
+.name h3{
+    color: red;
+    background: transparent;position: absolute;
+    font-size: 50px;
+    margin-top: 70px;
+    font-family: cursive;
+    font-style: italic;
+}
+.play{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.play img{
+    height: 200px;
+    background: transparent;
+    animation: roatate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes roatate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+        height: 220px;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.play button{
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 0;
+    background-image: url(./assets/play\ btn.png);
+    position: absolute;
+    background-size: cover;
+
+}
+
+/*   game screen */
+
+.gamewindow{
+    height:100vh;
+    width: 400px;
+    display: flex;
+    display: none;
+    background:transparent;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.getout{
+    animation: getout;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+@keyframes getout {
+    0%{
+        margin:0;
+        overflow: visible;
+    }
+    50%{
+        margin-left: 300px;
+        overflow: visible;
+    } 
+    100%{
+        margin-right: 2000px;
+        overflow: visible;
+    }
+}
+.scoreborad{
+    margin-top: 30px;
+    background-image:linear-gradient(to bottom, rgb(36, 35, 35,0.7),rgb(101, 91, 91,0.7));
+    width: 80%;
+    max-height: 200px;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.scoreborad button{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    background-color:gray;
+    margin-top: -10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    border: 2px rgb(0, 0, 0);
+    box-shadow: 1px 1px 3px gray;
+}
+.scoreborad button .white{
+    height: 60%;
+    width: 60%;
+    background-color: white;
+    border-radius: 50%;
+    border-top-left-radius: 30%;
+}
+.scoreborad button img{
+    height: 62%;
+    border-radius: 50%;
+    position: absolute;
+}
+.scoreborad button .lightgray{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    background-color: rgba(241, 235, 235, 0.2);
+    position: absolute;
+}
+#homee{
+    margin-right: 300px;
+}
+#setting{
+    margin-left: 300px;
+}
+.scoreborad h1{
+    background: transparent;
+    font-family: fantasy;
+    margin-top: -10px;
+    color: white;
+    word-spacing: 2%;
+    font-size: 40px;
+    line-height: 20px;
+}
+.scoreborad h3{
+    color: red;
+    background: transparent;
+    position: absolute;
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 20px;
+    font-family: cursive;
+    font-style: italic;
+}
+.level{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: transparent;
+}
+.level h1{
+    background-color: transparent;
+    font-size: 70px;
+    margin-top: 20px;
+}
+.highScore{
+    width: 100%;
+    background:transparent;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.highScore h3{
+    color: white;
+}
+.gamebox{
+    height: 300px;
+    width: 300px;
+    background-image:linear-gradient(to bottom, rgb(36, 35, 35,0.7),rgb(101, 91, 91,0.7));
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gamebox button{
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    position: absolute;
+    border: 9px rgb(80, 80, 80);
+    box-shadow: 1px 1px 3px white;
+    border-style:double;
+    background-image:linear-gradient(to bottom, rgb(36, 35, 35),rgb(101, 91, 91));
+}
+.gamebox button img{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.box{
+    height: 40%;
+    width: 40%;
+    box-shadow: 1px 1px 3px white;
+}
+.red{
+    background-color: red;
+    border: 6px rgb(216, 83, 83);
+    border-style: groove;
+    border-top-left-radius: 20px;
+    opacity: 0.4;
+}
+.blue{
+    background-color: blue;
+    border-bottom-left-radius: 20px;
+    border: 6px rgb(108, 108, 211);
+    border-style: groove;
+    opacity: 0.4;
+}
+.yellow{
+    background-color: yellow;
+    border-top-right-radius: 20px;
+    border: 6px rgb(234, 234, 131);
+    border-style: groove;
+    opacity: 0.4;
+}
+.green{
+    background-color: rgb(0, 255, 21);
+    border-bottom-right-radius: 20px;
+    border: 6px rgb(153, 102, 204);
+    border-style: groove;
+    opacity: 0.4;
+}
+.flash{
+    opacity: 1;
+}

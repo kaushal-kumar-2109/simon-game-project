@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Say!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio" >
+        <audio loop="loop" autoplay="autoplay" preload="auto" src="./assets/home.mp3" style="display: none;"></audio> 
+    </div>
+    <div class="audio" id="a1">
+        <audio src="./assets/simon btn 1.mp3" style="display: none;"></audio>
+    </div>
+    <div class="audio" id="a2">
+        <audio src="./assets/simon btn 2.mp3" style="display: none;"></audio>
+    </div>
+    <div class="audio" id="a3">
+        <audio src="./assets/simon btn 3.mp3" style="display: none;"></audio>
+    </div>
+    <div class="audio" id="a4">
+        <audio src="./assets/simon btn 4.mp3" style="display: none;"></audio>
+    </div>
+    <div class="audio" id="a5">
+        <audio src="./assets/leve up.mp3" style="display: none;"></audio>
+    </div>
+    <div class="audio" id="a6">
+        <audio src="./assets/game over.mp3" style="display: none;"></audio>
+    </div>
+
+
+     <div class="body">
+       <div class="home" id="home">
+        <div class="name">
+            <h1>Simon</h1>
+            <h3>Say!</h3>
+        </div>
+        <div class="play">
+            <img src="./assets/simon logo.png">
+            <button></button>
+         </div>
+       </div>
+
+       <div class="gamewindow" id="gamewindow">
+        <div class="scoreborad">
+            <button id="homee">
+                <div class="white"></div>
+                <img src="./assets/home.jpg">
+                <div class="lightgray"></div>
+            </button>
+            <button id="setting">
+                <div class="white"></div>
+                <img src="./assets/setting.jpg">
+                <div class="lightgray"></div>
+            </button>
+            <h1>Simon</h1>
+            <h3>Say!</h3>
+            <div class="level" id="level"><h1>0</h1></div>
+            <div class="highScore" id="score">
+                <h3>Best Score :</h3>
+            </div>
+        </div>
+
+        <div class="gamebox" type="button">
+            <div type="button" class="red box" id="red"></div>
+            <div type="button" class="yellow box" id="yellow"></div>
+            <div type="button" class="blue box" id="blue"></div>
+            <div type="button" class="green box" id="green"></div>
+            <button id="start"><img src="./assets/play btn.png"></button>
+        </div>
+       </div>
+     </div>
+</body>
+<script src="simon.js"></script>
+</html>
